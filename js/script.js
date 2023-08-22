@@ -34,6 +34,7 @@ const realizationsSection = document.querySelector("#realizations")
 const gradient = document.querySelector(".gradient")
 const expandCollapseBtn = document.querySelector("#expand-collapse")
 const carouselContainer = document.querySelector(".carousel-container")
+const popupCloseIcon = document.querySelector("#popup-close")
 const gridImages = [...document.querySelectorAll(".img-grid img")]
 const carouselImages = [...document.querySelectorAll(".carousel-inner img")]
 
@@ -77,6 +78,12 @@ searchIcon.addEventListener("click", () => {
 	searchInput.classList.toggle("show")
 })
 
+navLinks.forEach(navLink => {
+	navLink.addEventListener("click", () => {
+		nav.classList.remove('show')
+	})
+})
+
 //gallery expand/collapse logic
 
 expandCollapseBtn.addEventListener("click", () => {
@@ -98,13 +105,21 @@ gridImages.forEach(gridImage => {
 	})
 })
 
+function closeCarouselPopup() {
+	if (carouselContainer.classList.contains("show")) {
+		carouselContainer.classList.remove("show")
+		carouselImages.forEach(carouselImage => {
+			carouselImage.parentElement.classList.remove("active")
+		})
+	}
+}
+
 window.addEventListener("keydown", e => {
 	if (e.key === "Escape") {
-		if (carouselContainer.classList.contains("show")) {
-			carouselContainer.classList.remove("show")
-			carouselImages.forEach(carouselImage => {
-				carouselImage.parentElement.classList.remove("active")
-			})
-		}
+		closeCarouselPopup()
 	}
+})
+
+popupCloseIcon.addEventListener("click", () => {
+	closeCarouselPopup()
 })

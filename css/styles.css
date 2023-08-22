@@ -623,6 +623,15 @@ header .nav input.show {
 	opacity: 0.8;
 }
 
+.realizations .carousel-container #popup-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 4rem;
+	color: var(--white-color);
+	padding: 3rem 3rem 0 0;
+}
+
 .realizations .carousel-container .carousel {
 	position: relative;
 	z-index: 102;
