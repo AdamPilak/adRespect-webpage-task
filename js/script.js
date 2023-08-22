@@ -34,9 +34,9 @@ const realizationsSection = document.querySelector("#realizations")
 const gradient = document.querySelector(".gradient")
 const expandCollapseBtn = document.querySelector("#expand-collapse")
 const carouselContainer = document.querySelector(".carousel-container")
-const popupCloseIcon = document.querySelector("#popup-close")
+const popupCloseIcon = document.querySelector(".carousel-container .bx-x")
 const gridImages = [...document.querySelectorAll(".img-grid img")]
-const carouselImages = [...document.querySelectorAll(".carousel-inner img")]
+const carouselImages = [...document.querySelectorAll(".realizations .carousel-inner img")]
 
 
 //animations and scrollspy
