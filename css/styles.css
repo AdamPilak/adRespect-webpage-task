@@ -965,6 +965,7 @@ header .nav .animate,
 
 @media (max-width: 700px) {
 	.intro .image-bg,
+	.intro .carousel,
 	.about-company .image-bg {
 		display: none;
 	}
